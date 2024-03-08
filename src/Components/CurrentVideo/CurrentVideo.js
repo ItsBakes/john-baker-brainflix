@@ -2,7 +2,7 @@ import CurrentVideoInfo from "../CurrentVideoInfo/CurrentVideoInfo";
 
 
 
-function Hero ({selectedVid}) {
+function CurrentVideo ({selectedVid}) {
 
     return (
         <>
@@ -12,4 +12,4 @@ function Hero ({selectedVid}) {
     )
 }
 
-export default Hero;
+export default CurrentVideo;

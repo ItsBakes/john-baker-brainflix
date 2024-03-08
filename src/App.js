@@ -34,10 +34,9 @@ function App() {
     <>
     <Header/>
     <CurrentVideo selectedVid={selectedVid}/>
-    <CurrentVideoInfo selectedVid={selectedVid}/>
-    {/* <NextVideos Videos={Videos} selectVid={handleSelectVid}/> */}
+    {/* <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/> */}
     </>
-  ); // Videos={filteredVids}
+  ); 
 }
 
 export default App;
