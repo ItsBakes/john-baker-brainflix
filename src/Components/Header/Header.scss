@@ -1,0 +1,35 @@
+@use '../../styles/partials/mixins.scss' as *;
+@use '../../styles/partials/variables' as *;
+
+// header {
+    
+// }
+.header{
+    display: flex;
+    flex-direction: column;
+    margin: $mob-margin-side;
+    &__logo {
+        max-width: 7.5rem;
+        max-height: 1.563rem;
+    }
+    &__avatar{
+        width: $mob-avatar-size;
+        height: $mob-avatar-size;
+        border-radius: $avatar-border-rad;
+        object-fit:cover;
+        object-position: 20%;
+    }
+    &__upload {
+        display: flex;
+    }
+    &__button{
+        text-transform: uppercase;
+        border: none;
+        background-color: $brainflix-blue;
+        color: $brainflix-white;
+        border-radius: $button-rad;
+
+    }
+
+
+}
