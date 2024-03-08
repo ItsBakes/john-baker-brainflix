@@ -16,8 +16,8 @@ $brainflix-alabaster:#fafafa;
 $regular:400;
 $demi:600;
 $bold:700;
-$padding-headlines: 1.5rem,0,1rem,0;
-$mob-margin-side:0rem, 1rem,0rem, 1rem;
+$padding-headlines: 1.5rem 0 1rem 0;
+$mob-margin-side:0rem 1rem 0rem 1rem;
 $button-height: 2.5rem;
 $button-rad:.25rem;
 $page-Header-Text:1.5rem;
@@ -36,9 +36,9 @@ $mob-avatar-size:2.25rem;
 
 
 // tablet variables
-$tab-padidng-headlines: 2.25rem, 0, 1.5rem,0;
+$tab-padidng-headlines: 2.25rem  0  1.5rem 0;
 $tab-button-min-width: 9.375rem;
-$tab-margin-side:0, 2.25rem;
+$tab-margin-side:0  2.25rem;
 $tab-page-header-text:2.063rem;
 $tab-page-header-LH:2.75rem;
 $tab-subheader-text:.875rem;
