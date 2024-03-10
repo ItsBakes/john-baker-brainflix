@@ -8,9 +8,9 @@ function NextVideos (Videos, selectVid) {
                 console.log(video)
                 return (
                 <li>
-                    <button onClick={() => selectVid(video.id)} key={video.id}></button>
-                        <img className="NextVideos__image" src={video.image}></img>
-                        <div></div>
+                    <button onClick={() => selectVid(video.id)} key={video.id}>
+                       <img className="NextVideos__image" src={video.image}></img></button>
+                        <div>{video.description}</div>
                 </li>
                 )
             })}

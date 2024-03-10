@@ -7,7 +7,7 @@
 .header{
     display: flex;
     flex-direction: column;
-    margin: $mob-margin-side;
+    padding: $mob-margin-side;
     &__logo {
         max-width: 7.5rem;
         max-height: 1.563rem;

@@ -1,0 +1,9 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.CurrentVideo{
+    &__video {
+        width: 100%;
+        background: $brainflix-black;
+    }
+}

@@ -35,6 +35,7 @@ function App() {
     <Header/>
     <CurrentVideo selectedVid={selectedVid}/>
     {/* <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/> */}
+    {/* <CommentForm selectedVid={selectedVid} /> */}
     </>
   ); 
 }

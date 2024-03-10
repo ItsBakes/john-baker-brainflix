@@ -1,3 +1,10 @@
+// @use '../../assets/fonts/AvenirNextLTPro-Bold.otf' as *;
+// @use '../../assets/fonts/AvenirNextLTPro-Demi.otf' as *;
+// @use '../../assets/fonts/AvenirNextLTPro-Regular.otf' as *;
+// @use '../../assets/fonts/AvenirNextLTProBold.ttf' as *;
+// @use '../../assets/fonts/AvenirNextLTProDemi.ttf' as *;
+// @use '../../assets/fonts/AvenirNextLTPro.ttf' as *;
+
 // Breakpoints
 $tabletW: 768px;
 $desktopW: 1280px;
@@ -12,6 +19,10 @@ $brainflix-darkblue:#0d65ad;
 $brainflix-mercury:#e1e1e1;
 $brainflix-alabaster:#fafafa;
 
+// Fonts
+// $Avenir-Bold:
+// $Avenir-Demi:
+// $Avenir-Regular:
 // mobile/default variables
 $regular:400;
 $demi:600;
