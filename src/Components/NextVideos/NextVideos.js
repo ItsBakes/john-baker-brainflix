@@ -10,7 +10,8 @@ function NextVideos (Videos, selectVid) {
                 <li>
                     <button onClick={() => selectVid(video.id)} key={video.id}>
                        <img className="NextVideos__image" src={video.image}></img></button>
-                        <div>{video.description}</div>
+                        <div>{video.title}</div>
+                        <div>{video.channel}</div>
                 </li>
                 )
             })}
