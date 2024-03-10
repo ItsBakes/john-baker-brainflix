@@ -36,10 +36,8 @@ function App() {
     <>
     <Header/>
     <CurrentVideo selectedVid={selectedVid}/>
-    {/* <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/> */}
-    {/* <CommentForm /> */}
     <Comments selectedVid={selectedVid}/>
-
+    <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/>
     </>
   ); 
 }
