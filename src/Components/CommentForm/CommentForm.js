@@ -1,11 +1,10 @@
 
 
-function CommentForm (selectedVid) {
+function CommentForm ({selectedVid}) {
 
 
     return (
         <>
-        <div className="CommentForm__header">3 Comments</div>
         <section className="CommentForm__inputField">
             <img className="CommentForm__avatar" src="../../assets/images/Mohan-muruge.jpg" alt="avatar image"></img>
             <form className="CommentForm__form">
