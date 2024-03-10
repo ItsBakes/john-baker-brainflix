@@ -1,16 +1,17 @@
 @use '../../styles/partials/mixins.scss' as *;
 @use '../../styles/partials/variables' as *;
 
-// header {
-    
-// }
 .header{
     display: flex;
     flex-direction: column;
     padding: $mob-margin-side;
+    align-items: center;
+    width: auto;
+    flex-wrap: wrap;
     &__logo {
         max-width: 7.5rem;
         max-height: 1.563rem;
+        margin-top: 1rem;
     }
     &__avatar{
         width: $mob-avatar-size;
@@ -21,14 +22,36 @@
     }
     &__upload {
         display: flex;
+        margin-top: 1rem;
+        width: 100%;
     }
     &__button{
         text-transform: uppercase;
         border: none;
+        width: 100%;
+        height: $button-height;
         background-color: $brainflix-blue;
         color: $brainflix-white;
         border-radius: $button-rad;
 
+    }
+    &__search-container {
+        width: 100%;
+        margin-top: 1rem;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__input {
+        padding: $form-padding;
+        min-height: 2.25rem;
+        min-width: 15rem;
+        border: 1px $brainflix-mercury solid;
+        border-radius: $form-border-rad;
+        &:active {
+            border: 2px $brainflix-blue solid;
+        }
     }
 
 
