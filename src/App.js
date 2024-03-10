@@ -4,6 +4,7 @@ import Videos from './data/videos.json';
 import Header from './Components/Header/Header';
 import CurrentVideo from './Components/CurrentVideo/CurrentVideo'
 import { useState } from 'react';
+import CommentForm from './Components/CommentForm/CommentForm';
 import CurrentVideoInfo from './Components/CurrentVideoInfo/CurrentVideoInfo';
 import NextVideos from './Components/NextVideos/NextVideos'
 
@@ -35,7 +36,7 @@ function App() {
     <Header/>
     <CurrentVideo selectedVid={selectedVid}/>
     {/* <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/> */}
-    {/* <CommentForm selectedVid={selectedVid} /> */}
+    <CommentForm />
     </>
   ); 
 }
