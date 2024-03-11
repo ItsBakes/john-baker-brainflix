@@ -3,6 +3,9 @@
 
 .CurrentVideo {
     margin: $mob-margin-side;
+    @include tablet {
+        margin: $tab-margin-side;
+    }
     &__header{
         margin: 0;
         padding: $padding-headlines;
@@ -12,29 +15,36 @@
     }
     &__info {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
+        align-items: center;
         border-bottom: $divider;
         padding-bottom: 1rem;
     }
     &__author {
         font-size: $subheader-text;
         line-height: $subheader-LH;
+        width: 50%;
+        order: -1;
     }
     &__date {
         font-size: $body-text;
         line-height: $body-LH;
         color: $brainflix-silver;
+        width: 50%;
     }
     &__views {
         font-size: $body-text;
         line-height: $body-LH;
         color: $brainflix-silver;
+        width: 50%;
+        order: -1;
     }
     &__likes {
         font-size: $body-text;
         line-height: $body-LH;
         color: $brainflix-silver;
+        width: 50%;
     }
     &__desc {
         font-size: $body-text;
