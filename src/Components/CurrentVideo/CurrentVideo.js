@@ -7,7 +7,7 @@ function CurrentVideo ({selectedVid}) {
 
     return (
         <>
-        <video className="CurrentVideo__video" controls poster={selectedVid.image}><source src={selectedVid.video}></source></video>
+        <div className="CurrentVideo__video-Container"><video className="CurrentVideo__video" controls poster={selectedVid.image}><source src={selectedVid.video}></source></video></div>
         <CurrentVideoInfo selectedVid={selectedVid}/>
         </>
     )
