@@ -4,3 +4,9 @@
 // header, body {
 //     font-family: ;
 // }
+
+.content {
+    @include desktop {
+        display: flex;
+    }
+}

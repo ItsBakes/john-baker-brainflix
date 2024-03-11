@@ -1,0 +1,21 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.Comments {
+    margin: $mob-margin-side;
+    &__header {
+        margin: $mob-margin-side;
+        font-size: $subheader-text;
+        line-height: $subheader-LH;
+    }
+    &__avatar {
+        background: $brainflix-mercury;
+        border-radius: $avatar-border-rad;
+        width: $mob-avatar-size;
+        height: $mob-avatar-size;
+        @include tablet {
+            width: $tab-avatar-size;
+            height: $tab-avatar-size;
+        }
+    }
+}

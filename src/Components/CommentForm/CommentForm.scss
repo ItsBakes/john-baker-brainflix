@@ -1,0 +1,36 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.CommentForm {
+    &__inputField {
+        margin: $mob-margin-side;
+    }
+    &__avatar {
+        background: $brainflix-mercury;
+        border-radius: $avatar-border-rad;
+        width: $mob-avatar-size;
+        height: $mob-avatar-size;
+        object-fit:cover;
+        object-position: 20%;
+        @include tablet {
+            width: $tab-avatar-size;
+            height: $tab-avatar-size;
+        }
+    }
+    &__button {
+        text-transform: uppercase;
+        border: none;
+        width: 100%;
+        height: $button-height;
+        background-color: $brainflix-blue;
+        color: $brainflix-white;
+        border-radius: $button-rad;
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+        @include tablet {
+            width: $tab-button-min-width;
+            padding: $tab-button-padding;
+        }
+    }
+}
