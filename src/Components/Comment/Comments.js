@@ -6,7 +6,7 @@ function Comments ({selectedVid}) {
     return (
         <><div>{selectedVid.comments.length} Comments</div>
         <CommentForm />
-        <div>next videos</div>
+        
     {selectedVid.comments.map((comment) => {
     return (
         <>
@@ -19,7 +19,9 @@ function Comments ({selectedVid}) {
                 </div>
         </section>
         </>
-    ) })}
+    )
+    })}
+    <div>next videos</div> 
     </>)
 }
 

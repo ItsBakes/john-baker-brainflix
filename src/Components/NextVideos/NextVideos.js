@@ -3,20 +3,19 @@ import './NextVideos.scss'
 
 function NextVideos ({Videos, selectVid}) {
     return(
-        <ul className="NextVideos">
+        <section className="NextVideos">
            {Videos.map((video) => {
-                console.log(video)
                 return (
-                <li>
+                <div>
                     <button onClick={() => selectVid(video.id)} key={video.id}>
                        <img className="NextVideos__image" src={video.image}></img></button>
                         <section><div>{video.title}</div>
                         <div>{video.channel}</div></section>
-                </li>
+                </div>
                 )
             })}
             
-        </ul>
+        </section>
     )
 }
 

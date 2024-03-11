@@ -1,6 +1,6 @@
 
 
-function CommentForm ({selectedVid}) {
+function CommentForm () {
 
 
     return (

@@ -1,0 +1,44 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
+.CurrentVideo {
+    margin: $mob-margin-side;
+    &__header{
+        margin: 0;
+        padding: $padding-headlines;
+        font-size: $page-Header-Text;
+        line-height: $page-Header-LH;
+        border-bottom: $divider;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border-bottom: $divider;
+        padding-bottom: 1rem;
+    }
+    &__author {
+        font-size: $subheader-text;
+        line-height: $subheader-LH;
+    }
+    &__date {
+        font-size: $body-text;
+        line-height: $body-LH;
+        color: $brainflix-silver;
+    }
+    &__views {
+        font-size: $body-text;
+        line-height: $body-LH;
+        color: $brainflix-silver;
+    }
+    &__likes {
+        font-size: $body-text;
+        line-height: $body-LH;
+        color: $brainflix-silver;
+    }
+    &__desc {
+        font-size: $body-text;
+        line-height: $body-LH;
+    }
+
+}
