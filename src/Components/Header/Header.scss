@@ -4,35 +4,25 @@
 .header{
     display: flex;
     flex-direction: column;
-    padding: $mob-margin-side;
+    margin: $header-margin;
     align-items: center;
     width: auto;
     flex-wrap: wrap;
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: $tab-margin-header;
+        margin: 0;
+        width: auto
+    }
+    @include desktop {
+        padding: $desk-header-padding;
+    }
     &__logo {
         max-width: 7.5rem;
         max-height: 1.563rem;
-        margin-top: 1rem;
-    }
-    &__avatar{
-        width: $mob-avatar-size;
-        height: $mob-avatar-size;
-        border-radius: $avatar-border-rad;
-        object-fit:cover;
-        object-position: 20%;
-    }
-    &__upload {
-        display: flex;
-        margin-top: 1rem;
-        width: 100%;
-    }
-    &__button{
-        text-transform: uppercase;
-        border: none;
-        width: 100%;
-        height: $button-height;
-        background-color: $brainflix-blue;
-        color: $brainflix-white;
-        border-radius: $button-rad;
 
     }
     &__search-container {
@@ -42,15 +32,77 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        @include tablet {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 0;
+            width: 66%;
+        }
     }
+    &__search {
+        display: flex;
+        justify-content: space-between;
+        @include tablet {
+            order: -1;
+            margin: $tab-header-object-margin;
+        }
+    }
+    &__avatar{
+        width: $mob-avatar-size;
+        height: $mob-avatar-size;
+        border-radius: $avatar-border-rad;
+        object-fit:cover;
+        object-position: 20%;
+        @include tablet {
+            width: $tab-avatar-size;
+            height: $tab-avatar-size;
+            margin: $tab-header-object-margin;
+        }
+    }
+    &__upload {
+        display: flex;
+        margin-top: 1rem;
+        width: 100%;
+        @include tablet {
+            margin-top: 0;
+            order: -1;
+            width: $tab-button-min-width;
+            
+        }
+    }
+    &__button{
+        text-transform: uppercase;
+        border: none;
+        width: 100%;
+        height: $button-height;
+        background-color: $brainflix-blue;
+        color: $brainflix-white;
+        border-radius: $button-rad;
+        &:hover {
+            background-color: $brainflix-darkblue;
+        }
+        @include tablet {
+            width: $tab-button-min-width;
+            padding: $tab-button-padding;
+        }
+
+    }
+    
+    
     &__input {
         padding: $form-padding;
         min-height: 2.25rem;
         min-width: 15rem;
         border: 1px $brainflix-mercury solid;
         border-radius: $form-border-rad;
-        &:active {
+        &:focus {
             border: 2px $brainflix-blue solid;
+        }
+        @include tablet {
+            height: $tab-form-height;
+            padding: $tab-form-padding;
         }
     }
 

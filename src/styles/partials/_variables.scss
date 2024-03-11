@@ -19,6 +19,7 @@ $brainflix-darkblue:#0d65ad;
 $brainflix-mercury:#e1e1e1;
 $brainflix-alabaster:#fafafa;
 $brainflix-error: #d22d2d;
+$brainflix-controls: rgb(13, 13, 13, 50%); 
 
 // Fonts
 // $Avenir-Bold:
@@ -46,6 +47,7 @@ $avatar-border-rad: 50%;
 $mob-avatar-size:2.25rem;
 $form-border-rad: .25rem;
 $form-padding: .75rem;
+$header-margin: 1rem;
 
 
 
@@ -62,8 +64,13 @@ $tab-body-LH: 1.375rem;
 $tab-label-button-text: .75rem;
 $tab-label-button-LH:1.25rem;
 $tab-avatar-size:2.5rem;
-
+$tab-form-height: 2.5rem;
+$tab-margin-header: 1rem 2rem;
+$tab-form-padding: 1rem;
+$tab-header-object-margin: 0 1rem;
+$tab-button-padding: 0 2rem;
 
 
 // desktop variables
 $desk-margin-side:auto;
+$desk-header-padding:1rem 5rem;

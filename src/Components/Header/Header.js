@@ -12,9 +12,7 @@ function Header() {
                 <div className='header__search'><input className='header__input' type='search' placeholder='Search'></input>
                 </div>
                 <div><img src={Avatar} alt='avatar' className='header__avatar'></img></div> 
-                <div className='header__upload'> <button className='header__button'>upload</button></div>
-                  
-                
+                <div className='header__upload'> <button className='header__button'>upload</button></div>                
             </section>
         </header>
     )

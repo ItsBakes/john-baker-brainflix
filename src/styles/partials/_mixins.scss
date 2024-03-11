@@ -6,7 +6,7 @@
     }
 }
 
-@mixin tablet {
+@mixin desktop {
     @media(min-width: $desktopW){
         @content
     }
