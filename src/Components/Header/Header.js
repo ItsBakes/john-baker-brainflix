@@ -3,6 +3,8 @@ import Avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Header.scss'
 import Search from '../../assets/images/search.svg'
 
+
+// need icons for upload and search, need styling fix for border when active/focused
 function Header() {
 
     return (
@@ -11,7 +13,7 @@ function Header() {
             <section className='header__search-container'>
                 <div className='header__search'><input className='header__input' type='search' placeholder='Search'></input>
                 </div>
-                <div><img src={Avatar} alt='avatar' className='header__avatar'></img></div> 
+                <div className='header__avatar-container'><img src={Avatar} alt='avatar' className='header__avatar'></img></div> 
                 <div className='header__upload'> <button className='header__button'>upload</button></div>                
             </section>
         </header>
