@@ -4,14 +4,16 @@ import './NextVideos.scss'
 function NextVideos ({Videos, selectVid}) {
     
     return(
+        
         <section className="NextVideos">
+            <div className='NextVideos__header'>next videos</div> 
            {Videos.map((video) => {
                 return (
-                <div>
-                    <button onClick={() => selectVid(video.id)} key={video.id}>
-                       <img className="NextVideos__image" src={video.image}></img></button>
-                        <section><div>{video.title}</div>
-                        <div>{video.channel}</div></section>
+                <div className='NextVideos__container'>
+                    <div onClick={() => selectVid(video.id)} key={video.id}>
+                       <img className="NextVideos__image" src={video.image}></img></div>
+                        <section className='NextVideos__info-container'><div className='NextVidoes__title'>{video.title}</div>
+                        <div className='NextVideos__author'>{video.channel}</div></section>
                 </div>
                 )
             })}

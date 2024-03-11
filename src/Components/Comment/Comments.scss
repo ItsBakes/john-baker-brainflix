@@ -3,6 +3,12 @@
 
 .Comments {
     margin: $mob-margin-side;
+    font-size: $body-text;
+    line-height: $body-LH;
+    display: flex;
+    border-bottom: $divider;
+    padding-top: 1rem;
+
     &__header {
         margin: $mob-margin-side;
         font-size: $subheader-text;
@@ -13,9 +19,13 @@
         border-radius: $avatar-border-rad;
         width: $mob-avatar-size;
         height: $mob-avatar-size;
+        margin-right: 1rem;
         @include tablet {
             width: $tab-avatar-size;
             height: $tab-avatar-size;
         }
+    }
+    &__info {
+        width: 80%;
     }
 }

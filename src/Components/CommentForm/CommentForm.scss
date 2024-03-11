@@ -5,6 +5,8 @@
     &__inputField {
         margin: $mob-margin-side;
         display: flex;
+        border-bottom: $divider;
+        padding-bottom: 1rem;
     }
     &__avatar {
         background: $brainflix-mercury;

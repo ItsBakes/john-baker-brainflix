@@ -9,8 +9,10 @@ function Comments ({selectedVid}) {
         <CommentForm />
         
     {selectedVid.comments.map((comment) => {
-       let date = new Date(comment.timestamp);
+    
+    let date = new Date(comment.timestamp);
     const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYear(); 
+
     return (
         <>
         <section className="Comments">
@@ -24,7 +26,7 @@ function Comments ({selectedVid}) {
         </>
     )
     })}
-    <div>next videos</div> 
+
     </>)
 }
 

@@ -1,5 +1,37 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+
 .NextVideos {
+    margin: $mob-margin-side;
+    &__header {
+        padding: $padding-headlines;
+        font-size: $section-header-text;
+        line-height: $section-header-LH;
+        text-transform: uppercase;
+        color: $brainflix-silver;
+    }
+    &__container {
+        display: flex;
+        margin-bottom: 1rem;
+        
+    }
     &__image {
-        object-fit: contain;
+        width: 7rem;
+        border-radius: $form-border-rad;
+        background-color: $brainflix-mercury;
+        margin-right: 1rem;
+    }
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: $subheader-text;
+        line-height: $subheader-LH;
+    }
+    &__author {
+        font-size: $body-text;
+        line-height: $body-LH;
     }
 }
