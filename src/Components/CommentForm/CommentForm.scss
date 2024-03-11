@@ -4,6 +4,7 @@
 .CommentForm {
     &__inputField {
         margin: $mob-margin-side;
+        display: flex;
     }
     &__avatar {
         background: $brainflix-mercury;
@@ -12,10 +13,16 @@
         height: $mob-avatar-size;
         object-fit:cover;
         object-position: 20%;
+        margin:1.25rem 1rem 0 0;
         @include tablet {
             width: $tab-avatar-size;
             height: $tab-avatar-size;
         }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
     &__button {
         text-transform: uppercase;
@@ -37,8 +44,15 @@
         padding: $form-padding;
         border: 1px $brainflix-mercury solid;
         border-radius: $form-border-rad;
+        width: 93%;
         &:focus {
             border: 2px $brainflix-blue solid;
         }
+    }
+    &__label {
+        color: $brainflix-silver;
+        text-transform: uppercase;
+        font-size: $label-button-text;
+        line-height: $label-button-LH;
     }
 }
