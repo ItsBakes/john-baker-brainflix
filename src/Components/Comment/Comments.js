@@ -18,8 +18,8 @@ function Comments ({selectedVid}) {
         <section className="Comments">
             <img className="Comments__avatar" src=""></img>
             <div className="Comments__info">
-                <div className="Comments__name">{comment.name}</div>
-                <div className="Comments__date">{dateMath}</div>
+                <div className="Comments__name-date"><div className="Comments__name">{comment.name}</div>
+                <div className="Comments__date">{dateMath}</div></div>
                 <p className="Comments__body">{comment.comment}</p>
                 </div>
         </section>

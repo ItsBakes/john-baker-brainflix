@@ -13,6 +13,7 @@
         margin: $mob-margin-side;
         font-size: $subheader-text;
         line-height: $subheader-LH;
+        font-weight: $demi;
     }
     &__avatar {
         background: $brainflix-mercury;
@@ -27,5 +28,16 @@
     }
     &__info {
         width: 80%;
+    }
+    &__name-date {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        font-weight: $demi;
+
+    }
+    &__date {
+        color: $brainflix-silver;
     }
 }
