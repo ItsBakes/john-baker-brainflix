@@ -1,5 +1,10 @@
 @use '../../styles/partials/mixins.scss' as *;
 @use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typogrophy' as *;
+
+*{
+    font-family: 'Avenir Next';
+}
 
 .header{
     display: flex;
@@ -98,6 +103,7 @@
         border: 1px $brainflix-mercury solid;
         border-radius: $form-border-rad;
         &:focus {
+            outline: none;
             border: 2px $brainflix-blue solid;
         }
         @include tablet {
