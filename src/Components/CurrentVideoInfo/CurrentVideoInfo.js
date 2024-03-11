@@ -3,9 +3,8 @@ import views from '../../assets/images/views.svg'
 import likes from '../../assets/images/likes.svg'
 
 function CurrentVideoInfo ({selectedVid}) {
-let date = new Date(selectedVid.timestamp);
-const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYear();
-
+    let date = new Date(selectedVid.timestamp);
+    const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYear();
     return (
         <main className="CurrentVideo">
             <h1 className="CurrentVideo__header">{selectedVid.title}</h1>

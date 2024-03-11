@@ -33,4 +33,12 @@
             padding: $tab-button-padding;
         }
     }
+    &__textarea {
+        padding: $form-padding;
+        border: 1px $brainflix-mercury solid;
+        border-radius: $form-border-rad;
+        &:focus {
+            border: 2px $brainflix-blue solid;
+        }
+    }
 }

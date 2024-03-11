@@ -2,6 +2,7 @@
 import './NextVideos.scss'
 
 function NextVideos ({Videos, selectVid}) {
+    
     return(
         <section className="NextVideos">
            {Videos.map((video) => {
