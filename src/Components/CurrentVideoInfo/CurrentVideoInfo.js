@@ -12,8 +12,8 @@ const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYea
             <section className="CurrentVideo__info">
                 <h3 className="CurrentVideo__author">By {selectedVid.channel}</h3>
                 <div className="CurrentVideo__date">{dateMath}</div>
-                <div className="CurrentVideo__views"><img src={views} alt="viewsIcon"></img>{selectedVid.views}</div>
-                <div className="CurrentVideo__likes"><img src={likes} alt="likesIcon"></img>{selectedVid.likes}</div>
+                <div className="CurrentVideo__views"><img className='CurrentVideo__icon' src={views} alt="viewsIcon"></img>{selectedVid.views}</div>
+                <div className="CurrentVideo__likes"><img className='CurrentVideo__icon' src={likes} alt="likesIcon"></img>{selectedVid.likes}</div>
                 
             </section>
             <p  className="CurrentVideo__desc">{selectedVid.description}</p>

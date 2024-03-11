@@ -6,12 +6,19 @@
     @include tablet {
         margin: $tab-margin-side;
     }
+    @include desktop {
+        width: 66%;
+    }
     &__header{
         margin: 0;
         padding: $padding-headlines;
         font-size: $page-Header-Text;
         line-height: $page-Header-LH;
         border-bottom: $divider;
+        @include tablet {
+            border-bottom: none;
+        }
+
     }
     &__info {
         display: flex;
@@ -26,12 +33,21 @@
         line-height: $subheader-LH;
         width: 50%;
         order: -1;
+        @include tablet {
+            margin: 0;
+            width: auto;
+            padding-right: 1rem;
+        }
     }
     &__date {
         font-size: $body-text;
         line-height: $body-LH;
         color: $brainflix-silver;
         width: 50%;
+        @include tablet {
+            order: -1;
+            width: 57%;
+        }
     }
     &__views {
         font-size: $body-text;
@@ -39,16 +55,27 @@
         color: $brainflix-silver;
         width: 50%;
         order: -1;
+        @include tablet {
+            width: auto;
+            padding-right: 1rem;
+        }
     }
     &__likes {
         font-size: $body-text;
         line-height: $body-LH;
         color: $brainflix-silver;
         width: 50%;
+        @include tablet {
+            width: auto;
+
+        }
     }
     &__desc {
         font-size: $body-text;
         line-height: $body-LH;
+    }
+    &__icon {
+        padding-right: .25rem;
     }
 
 }
