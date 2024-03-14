@@ -6,30 +6,19 @@ import CurrentVideo from './Components/CurrentVideo/CurrentVideo'
 import { useState } from 'react';
 import NextVideos from './Components/NextVideos/NextVideos'
 import Comments from './Components/Comment/Comments';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// https://unit-3-project-api-0a5620414506.herokuapp.com/
+// "api_key": "ce976863-77d9-4921-9e41-14e53f8217da"
 
 function App() {
 
-  const [videos, setVideos] = useState(Videos);
-  
-
-  const [selectedVid, setSelectedVid] = useState(VideoDetails[0])
-
-
-  const handleSelectVid = (clickedId) => {
-    const foundVid = VideoDetails.find((video) => clickedId === video.id)
-    setSelectedVid(foundVid)
-  }
-  const filteredVids = videos.filter((video) => video.id !== selectedVid.id)
 
   return (
-    <>
-    <Header/>
-    <CurrentVideo selectedVid={selectedVid}/>
-    <main className='Content'>
-    <Comments selectedVid={selectedVid}/>
-    <NextVideos Videos={filteredVids} selectVid={handleSelectVid}/>
-    </main>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route></Route>
+      </Routes>
+    </BrowserRouter>
   ); 
 }
 

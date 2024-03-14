@@ -44,6 +44,7 @@
     &__search {
         display: flex;
         justify-content: space-between;
+        position: relative;
         @include tablet {
             order: -1;
             margin: $tab-header-object-margin;
@@ -65,6 +66,8 @@
         display: flex;
         margin-top: 1rem;
         width: 100%;
+        position: relative;
+        
         @include tablet {
             margin-top: 0;
             order: -1;
@@ -80,6 +83,7 @@
         background-color: $brainflix-blue;
         color: $brainflix-white;
         border-radius: $button-rad;
+        font-weight: $demi;
         &:hover {
             background-color: $brainflix-darkblue;
         }
@@ -93,6 +97,7 @@
     
     &__input {
         padding: $form-padding;
+        padding-left: 2rem;
         min-height: 2.25rem;
         min-width: 15rem;
         border: 1px $brainflix-mercury solid;
@@ -104,6 +109,16 @@
             height: $tab-form-height;
             padding: $tab-form-padding;
         }
+    }
+    &__icon {
+        position: absolute;
+        left: 2%;
+        top: 20%;
+    }
+    &__search-icon {
+        position: absolute;
+        top: 25%;
+        left: 4%;
     }
 
 
