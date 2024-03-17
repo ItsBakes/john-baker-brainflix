@@ -17,7 +17,7 @@ function UplodaVideo() {
                         <input className="UploadVideo__input" placeholder="Add a title to your video"></input>
                         <label className="UploadVideo__label">add a video description</label>
                         <textarea className="UploadVideo__textarea" placeholder="Add a description to your video"></textarea>
-                        <button className="UploadVideo__publish">publish</button>
+                        <button className="UploadVideo__publish"><img alt="upload icon" className="UploadVideo__icon" src="../../assets/images/upload.svg"/>publish</button>
                         <button className="uploadVideo__cancel">cancel</button>
                     </form>
                 </section>

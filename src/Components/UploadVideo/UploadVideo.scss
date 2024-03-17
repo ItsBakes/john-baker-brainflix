@@ -33,14 +33,18 @@
             border: $form-active;
         }
     }
-    // &__textarea {
-
-    // }
+    &__icon {
+        color: $brainflix-white;
+        position: absolute;
+    }
     &__publish {
         border: $form-border-rad;
         background-color: $brainflix-blue;
         color: $brainflix-white;
         position: relative;
+        &:hover{
+            background-color: $brainflix-darkblue;
+        }
     }
     &__cancel {
         border: none;
