@@ -3,9 +3,14 @@ import Avatar from '../../assets/images/Mohan-muruge.jpg'
 import './Header.scss'
 import Search from '../../assets/images/search.svg'
 import Upload from '../../assets/images/upload.svg'
+import { Link } from 'react-router-dom'
+import MainVideoPage from '../../Pages/MainVideoPage'
+import UploadPage from '../../Pages/UploadPage'
 
+// to-do: 
+// add link to MainVideoPage to brainflix logo
+// add link to Upload Page to upload button
 
-// need icons for upload and search, need styling fix for border when active/focused
 function Header() {
 
     return (
@@ -20,6 +25,6 @@ function Header() {
         </header>
     )
 
-}// give the button itself a pos of relative, and the icon a position of absolute. 
+}
 
 export default Header

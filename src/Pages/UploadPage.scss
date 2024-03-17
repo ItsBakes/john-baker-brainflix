@@ -1,0 +1,55 @@
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/typogrophy' as *;
+
+.UploadPage {
+    padding: $mob-margin-side;
+    border-top: $divider;
+    &__header{
+        font-size: $page-Header-Text;
+        line-height: $page-Header-LH;
+        font-weight: $bold;
+    }
+    &__thumbnail-container{
+        display: flex;
+        flex-direction: column;
+    }
+    &__thumbnail {
+        border-radius: $form-border-rad;
+    }
+    &__label {
+        text-transform: uppercase;
+        color: $brainflix-mercury;
+        font-size: $label-button-text;
+        line-height: $label-button-LH;
+    }
+    &__input, &__textarea {
+        padding: $form-padding;
+        border-radius: $form-border-rad;
+        border: $form-default;
+        background-color: $brainflix-alabaster;
+        outline: none;
+        &:focus {
+            border: $form-active;
+        }
+    }
+    &__icon {
+        color: $brainflix-white;
+        position: absolute;
+    }
+    &__publish {
+        border: $form-border-rad;
+        background-color: $brainflix-blue;
+        color: $brainflix-white;
+        position: relative;
+        &:hover{
+            background-color: $brainflix-darkblue;
+        }
+    }
+    &__cancel {
+        border: none;
+        background: none;
+        outline: none;
+        color: $brainflix-blue;
+    }
+}   

@@ -1,7 +1,8 @@
 import './App.scss';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import UploadPage from './Pages/UploadPage/UploadPage';
-import MainVideoPage from './Pages/MainVideoPage/MainVideoPage'
+import MainVideoPage from './Pages/MainVideoPage';
+import UploadPage from './Pages/UploadPage';
+
 // https://unit-3-project-api-0a5620414506.herokuapp.com/
 // "api_key": "ce976863-77d9-4921-9e41-14e53f8217da"
 
