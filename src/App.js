@@ -16,7 +16,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route></Route>
+        <Route /> {/* need path and element in each route*/}
+        <Route />
+        <Route />
       </Routes>
     </BrowserRouter>
   ); 
