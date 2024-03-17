@@ -12,27 +12,29 @@ import axios from "axios"
 function MainVideoPage() {
     
     const {idFromParams} = useParams()
-    const [videos, setVideos] = useState([]);
-    const apiKey = "ce976863-77d9-4921-9e41-14e53f8217da"
+    const [Videos, setVideos] = useState([]);
+    const [selectedVid, setSelectedVid] = useState()
+    const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
+    const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
 
     let defaultVideoId = null
 
-    if (videos.length > 0) {
-        defaultVideoId = videos[0].id
+    if (Videos.length > 0) {
+        defaultVideoId = Videos[0].id
     }
 
     let videoIdDisplay = idFromParams ?? defaultVideoId;
 
     
-    // const handleSelectVid = (clickedId) => {
-    //     const foundVid = VideoDetails.find((video) => clickedId === video.id)
-    //     setSelectedVid(foundVid)
-    // }
-    const filteredVids = videos.filter((video) => video.id !== videoIdDisplay)
+    const handleSelectVid = (clickedId) => {
+        const foundVid = Videos.find((video) => clickedId === video.id)
+        setSelectedVid(foundVid)
+    }
+    const filteredVids = Videos.filter((video) => video.id !== videoIdDisplay)
 
     useEffect(() => {
-        const getVideos = async () => {
-            const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=${apiKey}`)// need backticks for string interpolation
+        async function getVideos() {
+            const response = await axios.get(`${baseURL}${apiKey}`)// need backticks for string interpolation
             setVideos(response.data)
             console.log(response.data)
         }
@@ -41,10 +43,10 @@ function MainVideoPage() {
     return (
         <>
             <Header />
-            <CurrentVideo selectedVideoId={videoIdDisplay} />
+            <CurrentVideo videoIdDisplay={videoIdDisplay} />
             <main className='Content'>
-                <Comments selectedVideoId={videoIdDisplay} />
-                <NextVideos Videos={filteredVids} selectedVideoId={videoIdDisplay} />
+                <Comments videoIdDisplay={videoIdDisplay} />
+                <NextVideos filteredVids={filteredVids} selectVid={handleSelectVid}/>
             </main>
         </>
     );
