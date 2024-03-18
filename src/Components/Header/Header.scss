@@ -67,6 +67,7 @@
         margin-top: 1rem;
         width: 100%;
         position: relative;
+        text-decoration: none;
         
         @include tablet {
             margin-top: 0;
@@ -102,6 +103,7 @@
         min-width: 15rem;
         border: 1px $brainflix-mercury solid;
         border-radius: $form-border-rad;
+        outline: none;
         &:focus {
             border: 2px $brainflix-blue solid;
         }

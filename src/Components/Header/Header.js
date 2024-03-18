@@ -15,12 +15,12 @@ function Header() {
 
     return (
         <header className='header'>
-            <div className="header__logo-container"><Link to='/'><img className='header__logo' src={Logo}></img></Link></div>
+            <div className="header__logo-container"><Link className="header__logo-container" to='/'><img className='header__logo' src={Logo}></img></Link></div>
             <section className='header__search-container'>
                 <div className='header__search'><img className='header__search-icon' src={Search}/><input className='header__input' type='search' placeholder='Search'></input>
                 </div>
                 <div className='header__avatar-container'><img src={Avatar} alt='avatar' className='header__avatar'></img></div> 
-                <div className='header__upload'><Link to="/upload"><button className='header__button'><img className='header__icon' src={Upload}/>upload</button></Link></div>                
+                <div className='header__upload'><Link className='header__upload' to="/upload"><button className='header__button'><img className='header__icon' src={Upload}/>upload</button></Link></div>                
             </section>
         </header>
     )
