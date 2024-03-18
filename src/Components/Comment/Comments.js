@@ -3,21 +3,7 @@ import './Comments.scss'
 import { useState, useEffect } from "react"
 import axios from "axios"
 
-function Comments({ videoIdDisplay }) {
-    const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
-    const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
-    const [selectedVid, setSelectedVid] = useState(null)
-
-    useEffect(() => {
-        if (videoIdDisplay) {
-            const getVidDetails = async () => {
-                const response = await axios.get(`${baseURL}${videoIdDisplay}${apiKey}`)
-                setSelectedVid(response.data)
-                console.log(response.data)
-            }
-            getVidDetails()
-        }
-    }, [videoIdDisplay])
+function Comments({ selectedVid }) {
 
     if (!selectedVid) {
         return (
@@ -36,7 +22,7 @@ function Comments({ videoIdDisplay }) {
 
                 return (
                     <>
-                        <section className="Comments">
+                        <section className="Comments" key={comment.id}>
                             <img className="Comments__avatar" src=""></img>
                             <div className="Comments__info">
                                 <div className="Comments__name-date"><div className="Comments__name">{comment.name}</div>

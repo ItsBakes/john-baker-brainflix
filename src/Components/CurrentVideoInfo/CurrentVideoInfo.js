@@ -4,36 +4,22 @@ import likes from '../../assets/images/likes.svg'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-function CurrentVideoInfo ({videoIdDisplay}) {
-    const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
-    const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
-    const [VidInfo, setVidInfo] = useState([])
-
-    useEffect (() => {
-        if (videoIdDisplay) {
-            const getVidInfo = async () => {
-                const response = await axios.get(`${baseURL}${videoIdDisplay}${apiKey}`)
-                setVidInfo(response.data)
-                console.log(response.data)
-            }
-            getVidInfo()
-        }
-    }, [videoIdDisplay])
-
-    let date = new Date(VidInfo.timestamp);
+function CurrentVideoInfo ({selectedVid}) {
+ 
+    let date = new Date(selectedVid.timestamp);
     const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYear();
      
     return (
         <main className="CurrentVideo">
-            <h1 className="CurrentVideo__header">{VidInfo.title}</h1>
+            <h1 className="CurrentVideo__header">{selectedVid.title}</h1>
             <section className="CurrentVideo__info">
-                <h3 className="CurrentVideo__author">By {VidInfo.channel}</h3>
+                <h3 className="CurrentVideo__author">By {selectedVid.channel}</h3>
                 <div className="CurrentVideo__date">{dateMath}</div>
-                <div className="CurrentVideo__views"><img className='CurrentVideo__icon' src={views} alt="viewsIcon"></img>{VidInfo.views}</div>
-                <div className="CurrentVideo__likes"><img className='CurrentVideo__icon' src={likes} alt="likesIcon"></img>{VidInfo.likes}</div>
+                <div className="CurrentVideo__views"><img className='CurrentVideo__icon' src={views} alt="viewsIcon"></img>{selectedVid.views}</div>
+                <div className="CurrentVideo__likes"><img className='CurrentVideo__icon' src={likes} alt="likesIcon"></img>{selectedVid.likes}</div>
                 
             </section>
-            <p  className="CurrentVideo__desc">{VidInfo.description}</p>
+            <p  className="CurrentVideo__desc">{selectedVid.description}</p>
            
         </main>
     )

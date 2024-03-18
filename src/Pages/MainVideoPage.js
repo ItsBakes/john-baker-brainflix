@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Header from  '../Components/Header/Header'
 import CurrentVideo from  '../Components/CurrentVideo/CurrentVideo'
 import Comments from  '../Components/Comment/Comments'
 import NextVideos from  '../Components/NextVideos/NextVideos'
@@ -13,7 +12,7 @@ function MainVideoPage() {
     
     const {idFromParams} = useParams()
     const [Videos, setVideos] = useState([]);
-    const [selectedVid, setSelectedVid] = useState()
+    const [selectedVid, setSelectedVid] = useState(null)
     const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
     const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
 
@@ -23,30 +22,41 @@ function MainVideoPage() {
         defaultVideoId = Videos[0].id
     }
 
-    let videoIdDisplay = idFromParams ?? defaultVideoId;
-
-    
-    const handleSelectVid = (clickedId) => {
-        const foundVid = Videos.find((video) => clickedId === video.id)
-        setSelectedVid(foundVid)
-    }
-    const filteredVids = Videos.filter((video) => video.id !== videoIdDisplay)
+    let idToDisplay = (idFromParams ?? defaultVideoId)
 
     useEffect(() => {
         async function getVideos() {
-            const response = await axios.get(`${baseURL}${apiKey}`)// need backticks for string interpolation
+            try{
+            const response = await axios.get(`${baseURL}${apiKey}`)
             setVideos(response.data)
             console.log(response.data)
+            } catch (error) {
+                console.log(error)
+            }
         }
         getVideos();
-    },[])
+    },[])  
+
+    useEffect(() => {
+        if (idToDisplay) {
+            const getVidDetails = async () => {
+                const response = await axios.get(`${baseURL}${idToDisplay}${apiKey}`)
+                setSelectedVid(response.data)
+                console.log(response.data)
+            }
+            getVidDetails()
+        }
+    }, [idToDisplay])
+
+
+    const filteredVids = Videos.filter((video) => video.id !== idToDisplay)
+
     return (
         <>
-            <Header />
-            <CurrentVideo videoIdDisplay={videoIdDisplay} />
+            <CurrentVideo selectedVid={selectedVid} />
             <main className='Content'>
-                <Comments videoIdDisplay={videoIdDisplay} />
-                <NextVideos filteredVids={filteredVids} selectVid={handleSelectVid}/>
+                <Comments selectedVid={selectedVid} />
+                <NextVideos filteredVids={filteredVids}/>
             </main>
         </>
     );
