@@ -1,7 +1,13 @@
 @use '../../styles/partials/mixins' as *;
 @use '../../styles/partials/variables' as *;
 @use '../../styles/partials/typogrophy' as *;
+<<<<<<< HEAD
 
+=======
+*{
+    font-family: 'Avenir Next';
+}
+>>>>>>> develop
 .Comments {
     margin: $mob-margin-side;
     font-size: $body-text;
