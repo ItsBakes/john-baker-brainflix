@@ -21,6 +21,3 @@ function CommentForm() {
 }
 
 export default CommentForm;
-
-
-// need divider at bottom of section

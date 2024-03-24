@@ -4,9 +4,6 @@ import Comments from  '../Components/Comment/Comments'
 import NextVideos from  '../Components/NextVideos/NextVideos'
 import { useParams } from "react-router-dom";
 import axios from "axios"
-// import Videos from '../data/videos.json'
-// import VideoDetails from '../data/video-details.json'
-// "api_key": "ce976863-77d9-4921-9e41-14e53f8217da"
 
 function MainVideoPage() {
     

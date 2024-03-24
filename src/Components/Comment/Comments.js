@@ -1,7 +1,5 @@
 import CommentForm from "../CommentForm/CommentForm"
 import './Comments.scss'
-import { useState, useEffect } from "react"
-import axios from "axios"
 
 function Comments({ selectedVid }) {
 
