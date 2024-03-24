@@ -10,8 +10,8 @@ function MainVideoPage() {
     const {idFromParams} = useParams()
     const [Videos, setVideos] = useState([]);
     const [selectedVid, setSelectedVid] = useState(null)
-    const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
-    const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
+    // const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
+    const baseURL = `http://localhost:8080/videos/`
 
     let defaultVideoId = null
 
@@ -24,8 +24,9 @@ function MainVideoPage() {
     useEffect(() => {
         async function getVideos() {
             try{
-            const response = await axios.get(`${baseURL}${apiKey}`)
-            setVideos(response.data)
+            await axios.get(`${baseURL}`).then((response) => {
+                setVideos(response.data)
+            })
             } catch (error) {
                 console.log(error)
             }
@@ -36,8 +37,9 @@ function MainVideoPage() {
     useEffect(() => {
         if (idToDisplay) {
             const getVidDetails = async () => {
-                const response = await axios.get(`${baseURL}${idToDisplay}${apiKey}`)
-                setSelectedVid(response.data)
+                const response = await axios.get(`${baseURL}${idToDisplay}`).then((response) => {
+                    setSelectedVid(response.data)
+                })
                 }
             getVidDetails()
         }
