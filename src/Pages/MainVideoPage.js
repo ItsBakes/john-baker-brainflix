@@ -9,7 +9,7 @@ function MainVideoPage() {
     
     const {idFromParams} = useParams()
     const [Videos, setVideos] = useState([]);
-    const [selectedVid, setSelectedVid] = useState(null)
+    const [selectedVid, setSelectedVid] = useState([])
     // const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
     const baseURL = `http://localhost:8080/videos/`
 
@@ -21,12 +21,13 @@ function MainVideoPage() {
 
     let idToDisplay = (idFromParams ?? defaultVideoId)
 
+
     useEffect(() => {
-        async function getVideos() {
+        const getVideos = async () => {
             try{
-            await axios.get(`${baseURL}`).then((response) => {
+            const response = await axios.get(`${baseURL}`)
+                console.log(response.data)
                 setVideos(response.data)
-            })
             } catch (error) {
                 console.log(error)
             }
@@ -37,9 +38,8 @@ function MainVideoPage() {
     useEffect(() => {
         if (idToDisplay) {
             const getVidDetails = async () => {
-                const response = await axios.get(`${baseURL}${idToDisplay}`).then((response) => {
+                const response = await axios.get(`${baseURL}${idToDisplay}`)
                     setSelectedVid(response.data)
-                })
                 }
             getVidDetails()
         }
