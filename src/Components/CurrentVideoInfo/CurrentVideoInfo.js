@@ -1,8 +1,7 @@
 import './CurrentVideoInfo.scss'
 import views from '../../assets/images/views.svg'
 import likes from '../../assets/images/likes.svg'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+
 
 function CurrentVideoInfo ({selectedVid}) {
  

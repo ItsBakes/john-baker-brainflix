@@ -1,4 +1,3 @@
-// need to make the containers an <a> element. need to have the key assigned. 
 import './NextVideos.scss'
 import { Link } from 'react-router-dom';
 

@@ -29,7 +29,6 @@ function MainVideoPage() {
             try{
             const response = await axios.get(`${baseURL}${apiKey}`)
             setVideos(response.data)
-            console.log(response.data)
             } catch (error) {
                 console.log(error)
             }
@@ -42,8 +41,7 @@ function MainVideoPage() {
             const getVidDetails = async () => {
                 const response = await axios.get(`${baseURL}${idToDisplay}${apiKey}`)
                 setSelectedVid(response.data)
-                console.log(response.data)
-            }
+                }
             getVidDetails()
         }
     }, [idToDisplay])

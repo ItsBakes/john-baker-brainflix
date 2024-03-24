@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
 import CurrentVideoInfo from "../CurrentVideoInfo/CurrentVideoInfo";
 import './CurrentVideo.scss'
-import axios from "axios";
 
 
 
 function CurrentVideo ({selectedVid}) {
-
-    const [VidInfo, setVidInfo] = useState()
 
 
     if (!selectedVid) {
