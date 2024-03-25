@@ -110,12 +110,16 @@
         @include tablet {
             height: $tab-form-height;
             padding: $tab-form-padding;
+            padding-left: 2rem;
         }
     }
     &__icon {
         position: absolute;
         left: 2%;
         top: 20%;
+        @include tablet {
+            
+        }
     }
     &__search-icon {
         position: absolute;
