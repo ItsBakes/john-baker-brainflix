@@ -10,7 +10,8 @@ function Comments({ selectedVid }) {
     }
 
     return (
-        <><div className="Comments__header">{selectedVid.comments?.length} Comments</div>
+        <main className="Comments__container">
+            <div className="Comments__header">{selectedVid.comments?.length} Comments</div>
             <CommentForm />
 
             {selectedVid.comments?.map((comment) => {
@@ -30,7 +31,7 @@ function Comments({ selectedVid }) {
                 )
             })}
 
-        </>)
+        </main>)
 }
 
 export default Comments
