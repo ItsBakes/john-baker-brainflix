@@ -3,11 +3,11 @@ import views from '../../assets/images/views.svg'
 import likes from '../../assets/images/likes.svg'
 
 
-function CurrentVideoInfo ({selectedVid}) {
- 
+function CurrentVideoInfo({ selectedVid }) {
+
     let date = new Date(selectedVid.timestamp);
-    const dateMath = date.getMonth() + 1 +'/'+date.getDate() + '/' + date.getFullYear();
-     
+    const dateMath = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
+
     return (
         <main className="CurrentVideo">
             <h1 className="CurrentVideo__header">{selectedVid.title}</h1>
@@ -16,10 +16,10 @@ function CurrentVideoInfo ({selectedVid}) {
                 <div className="CurrentVideo__date">{dateMath}</div>
                 <div className="CurrentVideo__views"><img className='CurrentVideo__icon' src={views} alt="viewsIcon"></img>{selectedVid.views}</div>
                 <div className="CurrentVideo__likes"><img className='CurrentVideo__icon' src={likes} alt="likesIcon"></img>{selectedVid.likes}</div>
-                
+
             </section>
-            <p  className="CurrentVideo__desc">{selectedVid.description}</p>
-           
+            <p className="CurrentVideo__desc">{selectedVid.description}</p>
+
         </main>
     )
 }

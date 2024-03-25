@@ -20,14 +20,14 @@ function Comments({ selectedVid }) {
                 const dateMath = date.getMonth() + 1 + '/' + date.getDate() + '/' + date.getFullYear();
 
                 return (
-                        <section className="Comments" key={comment.id}>
-                            <div className="Comments__avatar"></div>
-                            <div className="Comments__info">
-                                <div className="Comments__name-date"><div className="Comments__name">{comment.name}</div>
-                                    <div className="Comments__date">{dateMath}</div></div>
-                                <p className="Comments__body">{comment.comment}</p>
-                            </div>
-                        </section>
+                    <section className="Comments" key={comment.id}>
+                        <div className="Comments__avatar"></div>
+                        <div className="Comments__info">
+                            <div className="Comments__name-date"><div className="Comments__name">{comment.name}</div>
+                                <div className="Comments__date">{dateMath}</div></div>
+                            <p className="Comments__body">{comment.comment}</p>
+                        </div>
+                    </section>
                 )
             })}
 

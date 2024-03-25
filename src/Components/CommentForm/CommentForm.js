@@ -14,7 +14,7 @@ function CommentForm() {
                         <textarea type="text" className="CommentForm__textarea" placeholder="Add a new comment"></textarea>
                     </div>
 
-                    <div className='CommentForm__button-container'><button className="CommentForm__button"><img className="CommentForm__icon" src={comment}/>comment</button></div>
+                    <div className='CommentForm__button-container'><button className="CommentForm__button"><img className="CommentForm__icon" src={comment} />comment</button></div>
                 </form>
             </section>
         </>
