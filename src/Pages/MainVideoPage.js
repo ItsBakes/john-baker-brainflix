@@ -10,7 +10,6 @@ function MainVideoPage() {
     const {idFromParams} = useParams()
     const [Videos, setVideos] = useState([]);
     const [selectedVid, setSelectedVid] = useState([])
-    // const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
     const baseURL = `http://localhost:8080/videos/`
 
     let defaultVideoId = null
@@ -26,7 +25,6 @@ function MainVideoPage() {
         const getVideos = async () => {
             try{
             const response = await axios.get(`${baseURL}`)
-                console.log(response.data)
                 setVideos(response.data)
             } catch (error) {
                 console.log(error)

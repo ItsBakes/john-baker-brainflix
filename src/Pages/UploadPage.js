@@ -1,24 +1,33 @@
 import "./UploadPage.scss"
 import UploadPreview from '../assets/images/Upload-video-preview.jpg'
 import Publish from '../assets/images/publish.svg'
-import { Navigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+import axios from "axios"
 
 function UploadPage() {
     const baseURL = `http://localhost:8080/videos/`
+    const navigate = useNavigate()
+    const [title, setTitle] = useState("")
+    const [description, setDescription] = useState("")
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const postVid = {
-            title: e.target.title.data,
-            description: e.target.description.data
+            title: title,
+            description: description
         }
-        try{
-        const response = await axios.post(`${baseURL}` + postVid)
-        console.log(response.data) 
-        }catch(error){
-            alert('Form ')
+        try {
+            const response = await axios.post(`${baseURL}`, postVid)
+            console.log(response.data)
+            alert(`Form Submitted Successfully`)
+            navigate('/')
+
+        } catch (error) {
+            alert('Form Was not submitted, please try again')
+            console.log(error)
         }
-               
+
     }
 
     return (
@@ -31,16 +40,16 @@ function UploadPage() {
                         <img src={UploadPreview} alt="video Thumbnail" className="UploadPage__thumbnail"></img>
                     </section>
                     <section className="UploadPage__form-container">
-                        <form className="UploadPage__form">
+                        <form className="UploadPage__form" onSubmit={handleSubmit}>
                             <label className="UploadPage__label">title your video
-                                <input className="UploadPage__input" placeholder="Add a title to your video" type="title"></input></label>
+                                <input className="UploadPage__input" placeholder="Add a title to your video" value={title} onChange={(e) => setTitle(e.target.value)}></input></label>
                             <label className="UploadPage__label">add a video description
-                                <textarea className="UploadPage__textarea" placeholder="Add a description to your video" type="description"></textarea></label>
+                                <textarea className="UploadPage__textarea" placeholder="Add a description to your video" value={description} onChange={(e) => setDescription(e.target.value)}></textarea></label>
+                            <section className="UploadPage__button-contianer">
+                                <button className="UploadPage__publish" type="submit"><img alt="upload icon" className="UploadPage__icon" src={Publish} />publish</button>
+                                <button className="UploadPage__cancel">cancel</button>
+                            </section>
                         </form>
-                        <section className="UploadPage__button-contianer">
-                            <button className="UploadPage__publish" onSubmit={handleSubmit} type="submit"><img alt="upload icon" className="UploadPage__icon" src={Publish} />publish</button>
-                            <button className="UploadPage__cancel">cancel</button>
-                        </section>
                     </section>
                 </section>
 
