@@ -8,7 +8,10 @@
 .NextVideos {
     margin: $mob-margin-side;
     @include tablet {
-        margin: $tab-margin-side;
+        padding-left: 2.25rem;   
+    }
+    @include desktop {
+        border-left: $divider;
     }
     &__header {
         padding: $padding-headlines;

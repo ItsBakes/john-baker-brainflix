@@ -12,6 +12,9 @@
         @include tablet {
             margin: $tab-margin-side;
         }
+        @include desktop {
+            width: 100%;
+        }
     }
     &__avatar {
         background: $brainflix-mercury;
@@ -85,6 +88,9 @@
     &__container {
         @include tablet {
             width: 66%
+        }
+        @include desktop {
+            padding: $desk-padding-side;
         }
     }
 }

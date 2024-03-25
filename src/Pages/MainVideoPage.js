@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import './MainVideoPage.scss'
 import CurrentVideo from  '../Components/CurrentVideo/CurrentVideo'
+import CurrentVideoInfo from "../Components/CurrentVideoInfo/CurrentVideoInfo";
 import Comments from  '../Components/Comment/Comments'
 import NextVideos from  '../Components/NextVideos/NextVideos'
 import { useParams } from "react-router-dom";
@@ -50,8 +52,13 @@ function MainVideoPage() {
         <>
             <CurrentVideo selectedVid={selectedVid} />
             <main className='Content'>
+                <section className="Content__Container-center">
+                <CurrentVideoInfo selectedVid={selectedVid}/>
                 <Comments selectedVid={selectedVid} />
+                </section>
+                <section className="Content__Container-side">
                 <NextVideos filteredVids={filteredVids}/>
+                </section>
             </main>
         </>
     );
