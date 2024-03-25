@@ -11,12 +11,17 @@
     display: flex;
     border-bottom: $divider;
     padding-top: 1rem;
-
+    @include tablet {
+        margin: $tab-margin-side;
+    }
     &__header {
         margin: $mob-margin-side;
         font-size: $subheader-text;
         line-height: $subheader-LH;
         font-weight: $demi;
+        @include tablet {
+            margin: $tab-margin-side;
+        }
     }
     &__avatar {
         background: $brainflix-mercury;

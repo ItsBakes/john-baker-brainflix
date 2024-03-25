@@ -3,11 +3,15 @@
 @use '../../styles/partials/typogrophy' as *;
 
 .CommentForm {
+    
     &__inputField {
         margin: $mob-margin-side;
         display: flex;
         border-bottom: $divider;
         padding-bottom: 1rem;
+        @include tablet {
+            margin: $tab-margin-side;
+        }
     }
     &__avatar {
         background: $brainflix-mercury;
@@ -36,6 +40,7 @@
     &__button {
         text-transform: uppercase;
         border: none;
+        position: relative;
         width: 100%;
         height: $button-height;
         background-color: $brainflix-blue;
@@ -67,5 +72,10 @@
         text-transform: uppercase;
         font-size: $label-button-text;
         line-height: $label-button-LH;
+    }
+    &__icon {
+        position: absolute;
+        left: 2%;
+        top: 20%;
     }
 }
