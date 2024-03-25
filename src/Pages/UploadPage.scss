@@ -55,6 +55,9 @@
         @include tablet {
             width: 100%;
         }
+        @include desktop {
+            padding-left: 1.5rem;
+        }
     }
     &__label {
         text-transform: uppercase;
