@@ -4,12 +4,8 @@ import './Header.scss'
 import Search from '../../assets/images/search.svg'
 import Upload from '../../assets/images/upload.svg'
 import { Link } from 'react-router-dom'
-import MainVideoPage from '../../Pages/MainVideoPage'
-import UploadPage from '../../Pages/UploadPage'
 
-// to-do: 
-// add link to MainVideoPage to brainflix logo
-// add link to Upload Page to upload button
+
 
 function Header() {
 

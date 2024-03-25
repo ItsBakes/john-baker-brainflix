@@ -12,12 +12,20 @@
     display: flex;
     border-bottom: $divider;
     padding-top: 1rem;
-
+    @include tablet {
+        margin: $tab-margin-side;
+    }
+    @include desktop {
+        width: 100%;
+    }
     &__header {
         margin: $mob-margin-side;
         font-size: $subheader-text;
         line-height: $subheader-LH;
         font-weight: $demi;
+        @include tablet {
+            margin: $tab-margin-side;
+        }
     }
     &__avatar {
         background: $brainflix-mercury;
@@ -43,5 +51,12 @@
     }
     &__date {
         color: $brainflix-silver;
+    }
+    &__container {
+        @include desktop {
+            width: 100%;
+            margin: none;
+            padding: none;
+        }
     }
 }

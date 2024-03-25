@@ -1,9 +1,3 @@
-// @use '../../assets/fonts/AvenirNextLTPro-Bold.otf' as *;
-// @use '../../assets/fonts/AvenirNextLTPro-Demi.otf' as *;
-// @use '../../assets/fonts/AvenirNextLTPro-Regular.otf' as *;
-// @use '../../assets/fonts/AvenirNextLTProBold.ttf' as *;
-// @use '../../assets/fonts/AvenirNextLTProDemi.ttf' as *;
-// @use '../../assets/fonts/AvenirNextLTPro.ttf' as *;
 
 // Breakpoints
 $tabletW: 768px;
@@ -20,11 +14,6 @@ $brainflix-mercury:#e1e1e1;
 $brainflix-alabaster:#fafafa;
 $brainflix-error: #d22d2d;
 $brainflix-controls: rgb(13, 13, 13, 50%); 
-
-// Fonts
-// $Avenir-Bold:
-// $Avenir-Demi:
-// $Avenir-Regular:
 
 // mobile/default variables
 $regular:400;
@@ -57,8 +46,6 @@ $header-margin: 1rem;
 $CV-padding-side: 0 1rem;
 $divider: 1px solid #e1e1e1;
 
-
-
 // tablet variables
 $tab-padidng-headlines: 2.25rem  0  1.5rem 0;
 $tab-button-min-width: 9.375rem;
@@ -78,7 +65,7 @@ $tab-form-padding: 1rem;
 $tab-header-object-margin: 0 1rem;
 $tab-button-padding: 0 2rem;
 
-
 // desktop variables
 $desk-margin-side:auto;
 $desk-header-padding:1rem 5rem;
+$desk-padding-side: 0 3rem;

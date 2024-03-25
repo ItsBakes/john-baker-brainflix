@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
+import './MainVideoPage.scss'
 import CurrentVideo from  '../Components/CurrentVideo/CurrentVideo'
+import CurrentVideoInfo from "../Components/CurrentVideoInfo/CurrentVideoInfo";
 import Comments from  '../Components/Comment/Comments'
 import NextVideos from  '../Components/NextVideos/NextVideos'
 import { useParams } from "react-router-dom";
 import axios from "axios"
-// import Videos from '../data/videos.json'
-// import VideoDetails from '../data/video-details.json'
-// "api_key": "ce976863-77d9-4921-9e41-14e53f8217da"
 
 function MainVideoPage() {
     
     const {idFromParams} = useParams()
     const [Videos, setVideos] = useState([]);
-    const [selectedVid, setSelectedVid] = useState(null)
-    const apiKey = "?api_key=ce976863-77d9-4921-9e41-14e53f8217da"
-    const baseURL = `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/`
+    const [selectedVid, setSelectedVid] = useState([])
+    const baseURL = `http://localhost:8080/videos/`
 
     let defaultVideoId = null
 
@@ -24,12 +22,12 @@ function MainVideoPage() {
 
     let idToDisplay = (idFromParams ?? defaultVideoId)
 
+
     useEffect(() => {
-        async function getVideos() {
+        const getVideos = async () => {
             try{
-            const response = await axios.get(`${baseURL}${apiKey}`)
-            setVideos(response.data)
-            console.log(response.data)
+            const response = await axios.get(`${baseURL}`)
+                setVideos(response.data)
             } catch (error) {
                 console.log(error)
             }
@@ -40,10 +38,9 @@ function MainVideoPage() {
     useEffect(() => {
         if (idToDisplay) {
             const getVidDetails = async () => {
-                const response = await axios.get(`${baseURL}${idToDisplay}${apiKey}`)
-                setSelectedVid(response.data)
-                console.log(response.data)
-            }
+                const response = await axios.get(`${baseURL}${idToDisplay}`)
+                    setSelectedVid(response.data)
+                }
             getVidDetails()
         }
     }, [idToDisplay])
@@ -55,8 +52,13 @@ function MainVideoPage() {
         <>
             <CurrentVideo selectedVid={selectedVid} />
             <main className='Content'>
+                <section className="Content__Container-center">
+                <CurrentVideoInfo selectedVid={selectedVid}/>
                 <Comments selectedVid={selectedVid} />
+                </section>
+                <section className="Content__Container-side">
                 <NextVideos filteredVids={filteredVids}/>
+                </section>
             </main>
         </>
     );

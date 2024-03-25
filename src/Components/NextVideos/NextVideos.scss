@@ -7,6 +7,12 @@
 }
 .NextVideos {
     margin: $mob-margin-side;
+    @include tablet {
+        padding-left: 2.25rem;   
+    }
+    @include desktop {
+        border-left: $divider;
+    }
     &__header {
         padding: $padding-headlines;
         font-size: $section-header-text;

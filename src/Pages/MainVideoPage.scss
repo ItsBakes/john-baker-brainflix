@@ -1,0 +1,20 @@
+@use '../styles/partials/mixins' as *;
+@use '../styles/partials/variables' as *;
+@use '../styles/partials/typogrophy' as *;
+
+.Content {
+    @include desktop {
+        display: flex;
+    }
+    &__Container-center{
+        @include desktop {
+            width: 65%;
+            padding: $desk-padding-side;
+        }
+    }
+    &__Container-side {
+        @include desktop {
+        width: 35%;
+        }
+    }
+}

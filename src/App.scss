@@ -1,13 +1,3 @@
 @use './styles/partials/mixins' as *;
 @use './styles/partials/variables' as *;
-// treat as global
 
-// header, body {
-//     font-family: ;
-// }
-
-.content {
-    @include desktop {
-        display: flex;
-    }
-}

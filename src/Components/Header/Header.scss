@@ -116,6 +116,7 @@
         @include tablet {
             height: $tab-form-height;
             padding: $tab-form-padding;
+            padding-left: 2rem;
         }
     }
     &__icon {
